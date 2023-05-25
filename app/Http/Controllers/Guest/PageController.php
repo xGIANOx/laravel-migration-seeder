@@ -10,9 +10,9 @@ class PageController extends Controller
 {
     public function index()
     {
-        
-        // $houses = House::orderByDesc('id')->get();
-        return view('trains');
+        // dd(Train::all());
+        $trains = Train::orderByDesc('id')->get();
+        return view('trains', compact('trains'));
     }
     
 }
